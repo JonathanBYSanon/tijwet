@@ -26,7 +26,7 @@ We’re just getting started. Upcoming game ideas:
 
 ## 🌐 Live Demo
 
-👉 [Click here to play Tijwet](https://your-username.github.io/tijwet/)  
+👉 [Click here to play Tijwet](https://jonathanbysanon.github.io/tijwet/)  
 
 ---
 
