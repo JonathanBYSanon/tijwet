@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const isIndex = window.location.pathname.includes("index");
+    const isIndex = window.location.pathname.includes("index") || window.location.pathname.endsWith("/");
 
     const basePath = isIndex ? "HTML/" : "../";
 
