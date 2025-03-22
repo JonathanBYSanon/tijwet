@@ -1,0 +1,103 @@
+header a
+{
+  display: none;
+}
+
+main
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: stretch;
+  padding:2em;
+}
+
+.game
+{
+  min-width:250px;
+  min-height: 200px;
+  box-shadow: 0 0 0.5em;
+  padding:1em;
+  border-radius:5px;
+  transition: all 0.4s ease-in-out;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.game:hover
+{
+  box-shadow: 0 0 1em;;
+}
+
+.game:hover .game-link
+{
+  background-color: black;
+  font-weight: Bolder;
+}
+
+.game-image
+{
+  grid-row: 1/span 2;
+  grid-column: 1/2;
+  object-fit:cover;
+  object-position: center;
+  width:100%;
+}
+
+.game-title
+{
+  grid-row: 1/2;
+  grid-column : 2/3;
+}
+
+.game-title, .game-link
+{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.game-link
+{
+  height: 80%;
+  width: 80%;
+  grid-row: 2/3;
+  grid-column:2/ 3;
+  background-color:#A8A8A5;
+  color:white;
+  border-radius:5px;
+}
+
+.game-link:hover
+{
+  background-color: black;
+  font-weight: Bolder;
+}
+
+@media (min-width: 550px) 
+{
+  main
+  {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .game
+  {
+    width:45%
+  }
+}
+
+@media (min-width: 800px) 
+{
+  .game
+  {
+    width:30%
+  }
+}
