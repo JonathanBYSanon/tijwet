@@ -1,0 +1,49 @@
+main
+{
+    width:80%;
+    padding: 3em 0;
+}
+
+main h1,h2
+{
+    text-align: left;
+    font-weight: Bolder;
+    padding: 1em;
+    text-decoration: underline;
+}
+
+strong
+{
+    display: inline-block;
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+}
+
+p , ul
+{
+    text-align: justify;
+    padding:0 2em 1em 2em;
+}
+
+main a
+{
+    color:darksalmon;
+    text-decoration: underline;
+}
+
+#last
+{
+    padding: 0;
+    padding-top:2em;
+    text-align: center;
+}
+
+@media (min-width:800px) 
+{
+    strong
+    {
+        width: 10em;
+        padding-right: 3em;
+    }
+}

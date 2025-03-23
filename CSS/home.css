@@ -80,6 +80,22 @@ main
   font-weight: Bolder;
 }
 
+#game-search {
+  width: 100%;
+  font-size: 1.5em;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.search-wrapper
+{
+  width: 90%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:1em;
+}
+
 @media (min-width: 550px) 
 {
   main
@@ -99,5 +115,9 @@ main
   .game
   {
     width:30%
+  }
+  .search-wrapper
+  {
+    width: 60%;
   }
 }
