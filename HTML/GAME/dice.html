@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the page for the dice game.">
+    <link rel="icon" type="image/svg+xml" href="../../ASSETS/logo-TiJwet.svg">
+
+    <link rel="apple-touch-icon" href="../../ASSETS/logo-TiJwet.png">
+    <meta name="apple-mobile-web-app-title" content="TiJwet">
+    <meta name="application-name" content="Tijwet">
+
+    <title>TiJwet | Dices </title>
+
+    <link rel="stylesheet" type="text/css" href="../../CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/header-footer.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/dice.css">
+    <script src="../../JS/header-footer.js" defer></script>
+
+</head>
+<body>
+
+    <section id="toggle-btn-wrapper">
+        <button id="how-to-toggle" title="How to Play">
+            <i class="fa fa-question-circle"></i>
+        </button>
+        <button id="fullscreen-toggle" title="Toggle Fullscreen">
+            <i class="fas fa-expand"></i>
+        </button>
+    </section>
+
+    <section id="how-to-play" class="hidden">
+        <h2>How to Play</h2>
+        <hr>
+        <p>
+          Choose how many dice you want to roll (from 1 to 6), then click the "<i class="fas fa-dice"></i>" button. Each die will display a random value from 1 to 6, and the total will be shown below. Use the result however you want — for challenges, group games, or just for fun!
+        </p>
+        <hr>
+    </section>
+      
+
+    <main>
+        <div class="controls">
+            <select id="dice-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <button id="roll-btn" title="Roll">
+            <i class="fas fa-dice"></i>
+            </button>
+        </div>
+      
+        <div id="dices-container">
+          <i class="fas fa-dice-one"></i>
+          <i class="fas fa-dice-one"></i>
+        </div>
+      
+        <h2 id="total">TOTAL : <span>2</span></h2>
+    </main>
+      
+    <script src="../../JS/dice.js" defer></script>
+
+</body>
+</html>

@@ -6,6 +6,12 @@ let games = [
         "default" : false
     },
     {
+      "img" : "ASSETS/dice.webp",
+      "title" : "Dice Roller",
+      "url" : "HTML/GAME/dice.html",
+      "default" : false
+    },
+    {
         "img" : "ASSETS/more_coming_soon.webp",
         "title" : "MORE COMING SOON",
         "url" : "#",
@@ -18,7 +24,13 @@ const game_template = document.querySelector('#game-template');
 
 let game_clone;
 
-games.forEach(game => {
+const gamesExceptDefault = games.slice(0, -1);
+const defaultGame = games[games.length - 1];
+
+const sortedGames = gamesExceptDefault.sort((a, b) => a.title.localeCompare(b.title));
+sortedGames.push(defaultGame);
+
+sortedGames.forEach(game => {
     game_clone = game_template.content.cloneNode(true);
     let img = game_clone.querySelector('img');
     img.src = game.img;
