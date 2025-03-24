@@ -61,12 +61,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const toggleBtn = document.getElementById("fullscreen-toggle");
+const toggleFullSCreenBtn = document.getElementById("fullscreen-toggle");
 
-if (toggleBtn) {
-  const icon = toggleBtn.querySelector("i");
+if (toggleFullSCreenBtn) {
+  const icon = toggleFullSCreenBtn.querySelector("i");
 
-  toggleBtn.addEventListener("click", () => {
+  toggleFullSCreenBtn.addEventListener("click", () => {
     const header = document.querySelector("header");
     const footer = document.querySelector("footer");
     const isFullscreen = header?.classList.contains("hidden");
@@ -78,3 +78,19 @@ if (toggleBtn) {
     icon.className = isFullscreen ? "fas fa-expand" : "fas fa-compress";
   });
 }
+
+const toggleHowToBtn = document.getElementById("how-to-toggle");
+
+if (toggleHowToBtn) {
+    const icon = toggleHowToBtn.querySelector("i");
+  
+    toggleHowToBtn.addEventListener("click", () => {
+      const howToSection = document.getElementById("how-to-play");
+  
+      const wasHidden = howToSection?.classList.contains("hidden");
+      howToSection.className = wasHidden ? "" : "hidden";
+  
+      // Update icon based on new state
+      icon.className = wasHidden ? "fa fa-times" : "fa fa-question-circle";
+    });
+  }

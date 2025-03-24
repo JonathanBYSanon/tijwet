@@ -108,16 +108,49 @@ footer span a
   display: none;
 }
 
-#fullscreen-toggle {
-  background: none;
-  border: none;
+#toggle-btn-wrapper
+{
   width: 100%;
-  padding:0;
-  padding-right: 1em;
-  padding-top: 1em;
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1em;
+  gap:1em;
+}
+
+#toggle-btn-wrapper button
+{
+  background: transparent;
+  border: none;
   font-size: 1.5rem;
   color:black;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: all 0.3s ease-in-out; 
+}
+
+#toggle-btn-wrapper button:hover
+{
+  transform:scale(1.2);
+}
+
+#how-to-play
+{
+  width:90%;
+  text-align: center;
+  background-color: beige; 
+  padding: 1em;
+  box-shadow: black 0 0 1em;
+}
+
+#how-to-play h2
+{
+  font-size: 2em;
+}
+
+#how-to-play p
+{
+  padding: 2em 4em;
+  text-align: left;
+  line-height: 1.5em;
 }

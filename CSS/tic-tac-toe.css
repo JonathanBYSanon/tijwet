@@ -11,12 +11,15 @@ main {
 
 main h2
 {
+  min-width: 250px;
   font-size: 1.5rem;
   background-color: lightsalmon;
   font-weight: bolder;
   padding: 0.5em;
   transition: all 0.5s ease-in-out; 
+  text-align: center;
 }
+
 .placeholder {
     color: transparent;
 }
@@ -57,7 +60,7 @@ main h2
   border-right: none;
 }
 
-button
+#reset
 {
   border: none;
   border-radius : 10px;
@@ -67,7 +70,7 @@ button
   color:white;
 }
 
-button:hover
+#reset:hover
 {
   background-color:black;
 }
