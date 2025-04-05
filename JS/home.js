@@ -12,6 +12,12 @@ let games = [
       "default" : false
     },
     {
+      "img" : "ASSETS/coin.png",
+      "title" : "Coin Flipper",
+      "url" : "HTML/GAME/coin.html",
+      "default" : false
+    },
+    {
         "img" : "ASSETS/more_coming_soon.webp",
         "title" : "MORE COMING SOON",
         "url" : "#",

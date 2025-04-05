@@ -1,0 +1,82 @@
+main
+{
+    flex:1;
+    min-height: 20em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: space-between;
+    transition: all 0.3s ease-in-out;
+}
+  
+.coin {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    background: radial-gradient(circle at top left, #FFD700, #DAA520);
+    border: 0.5em solid #DAA520;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.coin i
+{
+    font-size: 6em;
+    color:#DAA520;
+}
+  
+.flipping {
+    animation: coinFlip 5s ease forwards;
+}
+  
+@keyframes coinFlip {
+    0% {
+      transform: rotateY(0deg) translateY(0);
+    }
+    10% {
+      transform: rotateY(360deg) translateY(-30px) scaleY(1.1);
+    }
+    20% {
+      transform: rotateY(720deg) translateY(-60px) scaleY(0.9);
+    }
+    30% {
+      transform: rotateY(1080deg) translateY(-90px) scaleY(1.2);
+    }
+    50% {
+      transform: rotateY(1440deg) translateY(-110px) scaleY(0.85);
+    }
+    70% {
+      transform: rotateY(1800deg) translateY(-60px) scaleY(1.05);
+    }
+    85% {
+      transform: rotateY(2160deg) translateY(-20px) scaleY(0.98);
+    }
+    100% {
+      transform: rotateY(2160deg) translateY(0) scaleY(1); /* 6 full spins = 0deg visually */
+    }
+}
+ 
+#flip-button {
+    cursor: pointer;
+    border: none;
+    background-color: #3E2C1C;
+    padding: 0.2em;
+    width: 80%;
+    max-width: 15em;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 0.3em;
+}
+
+#flip-button:hover {
+    background-color: #5B3A2A;
+    transition: background-color 0.3s ease;
+}
+  

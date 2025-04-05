@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const headerImg = document.querySelector('header img');
             if (headerImg) {
                 headerImg.src = isIndex
-                    ? "ASSETS/logo-TiJwet-white.svg"
-                    : "../../ASSETS/logo-TiJwet-white.svg";
+                    ? "ASSETS/logo-TiJwet-light.png"
+                    : "../../ASSETS/logo-TiJwet-light.png";
             }
         });
 

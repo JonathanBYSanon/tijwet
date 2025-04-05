@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the page for the dice game.">
-    <meta name="keywords" content="Tijwet, games, browser games, casual games, fun games, game hub, dice, dices" />
+    <meta name="description" content="This is the page for the coin game.">
+    <meta name="keywords" content="Tijwet, games, browser games, casual games, fun games, game hub, coin, coin flip" />
     <meta name="author" content="Jonathan Sanon" />
 
     <!-- Theme colors -->
@@ -29,12 +29,12 @@
     <meta name="twitter:description" content="Play casual browser games instantly on your browser — no download needed!" />
     <meta name="twitter:image" content="https://tijwet.com/ASSETS/logo-TiJwet-light.png" />
 
-    <title>TiJwet | Dices </title>
+    <title>TiJwet | Coin </title>
 
     <link rel="stylesheet" type="text/css" href="../../CSS/reset.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/header-footer.css">
-    <link rel="stylesheet" type="text/css" href="../../CSS/dice.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/coin.css">
     <script src="../../JS/header-footer.js" defer></script>
 
 </head>
@@ -53,36 +53,23 @@
         <h2>How to Play</h2>
         <hr>
         <p>
-          Choose how many dice you want to roll (from 1 to 6), then click the "<i class="fas fa-dice"></i>" button. Each die will display a random value from 1 to 6, and the total will be shown below. Use the result however you want — for challenges, group games, or just for fun!
+            Click to flip the coin. The coin will randomly land on either heads or tails. Use the result however you want — for challenges, group games, or just for fun!<br>
+            Head : <i class="fas fa-smile-beam"></i> - Tail : <i class="fas fa-dollar-sign"></i>
         </p>
+          
         <hr>
     </section>
       
 
     <main>
-        <div class="controls">
-            <select id="dice-count">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-            <button id="roll-btn" title="Roll">
-            <i class="fas fa-dice"></i>
-            </button>
+        <div class="coin">
+            <i class="far fa-smile-beam"></i>
         </div>
-      
-        <div id="dices-container">
-          <i class="fas fa-dice-one"></i>
-          <i class="fas fa-dice-one"></i>
-        </div>
-      
-        <h2 id="total">TOTAL : <span>2</span></h2>
+        
+        <button id="flip-button"><i class="fas fa-sync-alt"> </i></button>
     </main>
       
-    <script src="../../JS/dice.js" defer></script>
+    <script src="../../JS/coin.js" defer></script>
 
 </body>
 </html>
