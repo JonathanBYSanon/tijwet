@@ -62,7 +62,7 @@ rollBtn.addEventListener("click", () => {
         total += values[i];
       });
       totalSpan.textContent = total;
-    }, 900); // match your animation duration
+    }, 2000); // match your animation duration
 });  
 
 input.value = count;
