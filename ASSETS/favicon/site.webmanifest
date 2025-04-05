@@ -1,6 +1,8 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "TiJwet",
+  "short_name": "TiJwet",
+  "description": "TiJwet is a web application that provides fun and free games to play together.",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
