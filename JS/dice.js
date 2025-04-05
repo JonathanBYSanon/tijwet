@@ -1,3 +1,12 @@
+document.addEventListener("optionbarLoaded", () => {
+  const howToPlayText = document.querySelector("#how-to-play p");
+  if (howToPlayText) {
+      howToPlayText.innerHTML = `Choose how many dice you want to roll (from 1 to 6), then click the "<i class="fas fa-dice"></i>" 
+      button. Each die will display a random value from 1 to 6, and the total will be shown below. Use the result however you want — 
+      for challenges, group games, or just for fun!`;
+  }
+});
+
 const input = document.getElementById("dice-count");
 const rollBtn = document.getElementById("roll-btn");
 const diceContainer = document.getElementById("dices-container");
