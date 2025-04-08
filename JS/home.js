@@ -18,6 +18,12 @@ let games = [
       "default" : false
     },
     {
+      "img" : "ASSETS/click-trail.png",
+      "title" : "Click Trail",
+      "url" : "HTML/GAME/click-trail.html",
+      "default" : false
+    },
+    {
         "img" : "ASSETS/more_coming_soon.webp",
         "title" : "MORE COMING SOON",
         "url" : "#",

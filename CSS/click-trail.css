@@ -1,0 +1,149 @@
+main
+{
+    flex:1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2em;
+    margin: 2em 0;
+}
+
+main h2
+{
+  min-width: 250px;
+  max-width: 80%;
+  font-size: 1.5rem;
+  background-color:  lightsalmon;
+  font-weight: bolder;
+  padding: 0.5em;
+  transition: all 0.5s ease-in-out; 
+  text-align: center;
+}
+
+#rows-count
+{
+  background: transparent;
+  border:1px solid white;
+  font-size:2em;
+  font-weight:bold;
+  text-align:center;
+  min-width: 100px;
+}
+
+main table
+{
+    flex:1;
+    border-collapse: collapse;
+    width:70%;
+    max-width: 30em;
+    transition: all 1s ease-in-out;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border: 2em solid transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:stretch;
+    gap:0.2em;
+    transition: all 1s ease-in-out;
+}
+  
+tbody td {
+    aspect-ratio: 1 / 1;
+    width: 30%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+  
+tbody tr {
+    width: 100%;
+    transition: all 1s ease-in-out;
+    display: flex;
+    gap:0.2em;
+}
+  
+tbody tr.active td {
+    background-color: grey;
+    cursor: pointer;
+}
+  
+tbody tr td.correct {
+    background-color: #8bc34a;
+}
+  
+tbody tr td.wrong {
+    background-color: #f44336;
+}
+  
+tbody tr.coming {
+    height: 0;
+    pointer-events: none;
+}
+
+tr.default td {
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+}
+
+tr.default td i{
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+}
+
+thead th
+{
+    background: lightpink;
+}
+
+thead th, tfoot td {
+    text-align: center;
+    padding: 1em;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+  
+@keyframes victoryPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+}
+  
+thead.won th {
+    background: #2E7D32 20px;
+    animation: victoryPulse 1.2s ease-in-out infinite; 
+    text-shadow: 1px 1px 3px #000;
+    position:relative;
+}
+
+
+tfoot td {
+    background: black;
+}
+
+tfoot button
+{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 2em;
+    color:white;
+    cursor: pointer;
+}
