@@ -61,6 +61,7 @@ tbody td {
     font-size: 2em;
     box-shadow: 0 0 5px black;
     border-radius:0.2em;
+    background-color: beige;
 }
   
 tbody tr {
@@ -90,7 +91,8 @@ tbody tr.coming {
     pointer-events: none;
 }
 
-tr.default td i{
+tr.default td {
+    background-color: transparent;
     pointer-events: none;
     cursor: default;
 }

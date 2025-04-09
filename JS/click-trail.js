@@ -30,6 +30,7 @@ let playerWon = false;
 let computing = false;
 let isPlaying = false;
 let triesCount = 0;
+let lastPassedRow = 0;
 
 // ######## Events Listeners ########
 
@@ -37,7 +38,7 @@ rowsSetter.addEventListener("input", (e) => {
     rows = e.target.value;
     ClearTableBody();
     message.innerHTML = `Rows: ${rows}. Start your new game!`;
-    tbody.innerHTML = `<tr>
+    tbody.innerHTML = `<tr class="default">
                         <td><i class="fas fa-arrow-up"></i></td>
                         <td><i class="fas fa-arrow-up"></i></td>
                         <td><i class="fas fa-arrow-up"></i></td>
@@ -50,8 +51,7 @@ startButton.addEventListener("click", () => {
     
     if (gameOver)
     {
-        retryGame();
-        startButtonText.innerText = "";
+        retryGame();   
         return;
     }
 
@@ -63,8 +63,6 @@ startButton.addEventListener("click", () => {
         }
         
         startNewGame();
-        progress.innerText = `0 / ${rows}`;
-        startButtonText.innerText = "";
     } 
 
     
@@ -92,6 +90,7 @@ tbody.addEventListener("click", (e) => {
         target.classList.add("correct");
         target.innerText = steps + 1;
         progress.innerText = `${currentRow+1} / ${rows}`;
+        lastPassedRow = row;
         
         if(steps === 0 || currentRow > path[steps - 1][0])
         {
@@ -108,7 +107,7 @@ tbody.addEventListener("click", (e) => {
         }
   
     } else {
-        if(row < currentRow - 1 ) return;
+        if(lastPassedRow > row) return;
         target.classList.add("wrong");
         message.innerHTML = `Oops! you stepped on the wrong tile. Try again ! `;
         gameOver = true;
@@ -216,6 +215,9 @@ function startNewGame() {
     steps = 0;   
     setTriesCount(true);
     playerWon = false;
+    startButtonText.innerText = "";
+    progress.innerText = `0 / ${rows}`;
+    lastPassedRow = 0;
 }
 
 function retryGame() {
@@ -229,6 +231,9 @@ function retryGame() {
     initializeClasses();
     gameOver = false;
     steps = 0;
+    startButtonText.innerText = "";
+    progress.innerText = `0 / ${rows}`;
+    lastPassedRow = 0;
 }
 
 message.innerHTML = `Start a new game!`;
