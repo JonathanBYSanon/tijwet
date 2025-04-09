@@ -2,7 +2,7 @@ document.addEventListener("optionbarLoaded", () => {
   const howToPlayText = document.querySelector("#how-to-play p");
   if (howToPlayText) {
       howToPlayText.innerHTML = `Players take turns placing an X or an O on a 3×3 grid. The first to align three of their marks horizontally, 
-      vertically, or diagonally wins. If all spaces are filled without a winner, the game ends in a draw.`;
+      vertically, or diagonally wins. If all spaces are filled without a winner, the game ends in a draw. 2 players mode or 1 player vs AI mode available.`;
   }
 });
 
