@@ -14,7 +14,7 @@ document.addEventListener("optionbarLoaded", () => {
 // Elements
 const rowsSetter = document.getElementById("rows-count"); 
 const startButton = document.getElementById("start-btn");
-const retryButton = document.getElementById("retry-btn");
+const startButtonText = startButton.querySelector("span");
 const message = document.querySelector("#message");
 const progress = document.getElementById("progress");
 const table = document.querySelector("table")
@@ -47,12 +47,14 @@ rowsSetter.addEventListener("input", (e) => {
 });
 
 startButton.addEventListener("click", () => {
-    progress.innerText = `0 / ${rows}`;
+    
     if (gameOver)
     {
         retryGame();
+        startButtonText.innerText = "";
         return;
     }
+
     else if (!isPlaying || playerWon)
     {
         if (playerWon)
@@ -61,7 +63,10 @@ startButton.addEventListener("click", () => {
         }
         
         startNewGame();
+        progress.innerText = `0 / ${rows}`;
+        startButtonText.innerText = "";
     } 
+
     
 });
 
@@ -99,12 +104,15 @@ tbody.addEventListener("click", (e) => {
             message.innerHTML = `Congratulations, You found the trail. After ${triesCount} tries!`;
             playerWon = true;
             table.querySelector("thead").classList.add("won");
+            startButtonText.innerText = "START";
         }
   
     } else {
+        if(row < currentRow - 1 ) return;
         target.classList.add("wrong");
         message.innerHTML = `Oops! you stepped on the wrong tile. Try again ! `;
         gameOver = true;
+        startButtonText.innerText = "RETRY";
     }
 
     setTimeout(() => {

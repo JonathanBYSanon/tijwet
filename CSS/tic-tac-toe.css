@@ -20,6 +20,22 @@ main h2
   text-align: center;
 }
 
+.controls
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1em;
+  background-color: lightgrey;
+  padding: 1em;
+}
+
+.controls #mode
+{
+  font-size: 1em;
+  font-weight: bolder;
+}
+
 .placeholder {
     color: transparent;
 }
@@ -29,6 +45,7 @@ main h2
   color: green;
   background-color: lightgrey;
 }
+
 #board
 {
   border-collapse:collapse;
