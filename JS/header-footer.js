@@ -1,15 +1,22 @@
 let footerLinks =
 [
+    
+    {
+        "name": "About",
+        "url": "about.html",
+        "folder": "INFO"
+    },
+    {
+        "name": "Privacy Policy",
+        "url": "privacy.html",
+        "folder": "INFO"
+    },
     {
         "name": "Legal",
         "url": "legal.html",
         "folder": "INFO"
     },
-    {
-        "name": "About",
-        "url": "about.html",
-        "folder": "INFO"
-    }
+
 ];
 
 
