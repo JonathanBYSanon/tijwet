@@ -34,7 +34,6 @@ main h2
 
 main table
 {
-    flex:1;
     border-collapse: collapse;
     width:70%;
     max-width: 30em;
@@ -89,6 +88,13 @@ tbody tr td.wrong {
 tbody tr.coming {
     height: 0;
     pointer-events: none;
+}
+
+tr.coming td {
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+    cursor: default;
 }
 
 tr.default td {
