@@ -12,13 +12,13 @@ let games = [
       "default" : false
     },
     {
-      "img" : "ASSETS/coin.png",
+      "img" : "ASSETS/coin.webp",
       "title" : "Coin Flipper",
       "url" : "HTML/GAME/coin.html",
       "default" : false
     },
     {
-      "img" : "ASSETS/click-trail.png",
+      "img" : "ASSETS/click-trail.webp",
       "title" : "Click Trail",
       "url" : "HTML/GAME/click-trail.html",
       "default" : false
