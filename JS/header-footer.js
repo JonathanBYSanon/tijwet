@@ -19,11 +19,6 @@ let footerLinks =
 
 ];
 
-
-window.addEventListener("load", () => {
-    document.body.classList.add("visible");
-  });
-
 document.addEventListener("DOMContentLoaded", function () {
     const isIndex = window.location.pathname.includes("index") || window.location.pathname.endsWith("/");
 

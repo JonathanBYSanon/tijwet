@@ -6,7 +6,6 @@
 
 /* Global Styles */
 body {
-    opacity: 0;
     transition: opacity 1s ease-in-out;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -18,11 +17,6 @@ body {
     align-items: center;
     gap:0.5em;
     min-height:100vh;
-}
-
-
-body.visible {
-    opacity: 1;
 }
 
 a {
