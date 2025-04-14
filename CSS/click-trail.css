@@ -10,18 +10,6 @@ main
     margin: 2em 0;
 }
 
-main h2
-{
-  min-width: 250px;
-  max-width: 80%;
-  font-size: 1.5rem;
-  background-color:  lightsalmon;
-  font-weight: bolder;
-  padding: 0.5em;
-  transition: all 0.5s ease-in-out; 
-  text-align: center;
-}
-
 #rows-count
 {
   background: transparent;

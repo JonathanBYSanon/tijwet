@@ -18,6 +18,18 @@ let games = [
       "default" : false
     },
     {
+      "img" : "ASSETS/capital-quiz.webp",
+      "title" : "Tijwet Quiz : Capitals",
+      "url" : "HTML/GAME/capital-quiz.html",
+      "default" : false
+    },
+    {
+      "img" : "ASSETS/math-quiz.webp",
+      "title" : "Tijwet Quiz : Maths",
+      "url" : "HTML/GAME/math-quiz.html",
+      "default" : false
+    },
+    {
       "img" : "ASSETS/click-trail.webp",
       "title" : "Click Trail",
       "url" : "HTML/GAME/click-trail.html",
