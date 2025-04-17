@@ -1,5 +1,11 @@
 let games = [
     {
+    "img" : "ASSETS/daily-check-in.webp",
+    "title" : "Daily Check-In (April)",
+    "url" : "HTML/GAME/check-in.html",
+    "default" : true
+    },
+    {
         "img" : "ASSETS/tic-tac-toe.webp",
         "title" : "Tic Tac Toe",
         "url" : "HTML/GAME/tic-tac-toe.html",
@@ -48,11 +54,13 @@ const game_template = document.querySelector('#game-template');
 
 let game_clone;
 
-const gamesExceptDefault = games.slice(0, -1);
-const defaultGame = games[games.length - 1];
+const gamesExceptDefault = games.slice(1, -1);
+const MoreGameDefault = games[games.length - 1];
+const CheckInDefault = games[0];
 
 const sortedGames = gamesExceptDefault.sort((a, b) => a.title.localeCompare(b.title));
-sortedGames.push(defaultGame);
+sortedGames.unshift(CheckInDefault);
+sortedGames.push(MoreGameDefault);
 
 sortedGames.forEach(game => {
     game_clone = game_template.content.cloneNode(true);
@@ -65,7 +73,7 @@ sortedGames.forEach(game => {
 
     if (game.default) {
         game_clone.querySelector('.game').classList.add('default');
-        a.textContent = "+";
+        a.textContent = game === CheckInDefault ? "✔️" : "➕";
     }
 
     body_main.appendChild(game_clone);
