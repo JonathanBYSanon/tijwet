@@ -1,7 +1,7 @@
 let games = [
     {
     "img" : "ASSETS/daily-check-in.webp",
-    "title" : "Daily Check-In (April)",
+    "title" : "Fortune Cookie",
     "url" : "HTML/GAME/check-in.html",
     "default" : true
     },

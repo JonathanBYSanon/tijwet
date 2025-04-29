@@ -188,6 +188,11 @@ const checkInMessages = {
     ]
   };
   
+/* ################################### UI ################################### */
+
+const categoryElement = document.getElementById("check-in-category");
+const messageElement = document.getElementById("check-in-message");
+const streakElement = document.getElementById("check-in-streak");
 
 // Get today's date (just the day part for simplicity)
 const getToday = () => new Date().toLocaleDateString();
@@ -231,6 +236,10 @@ const getMessage = () => {
     }
     saveMessage();
   }
+
+  categoryElement.textContent = category
+  messageElement.textContent = message;
+  streakElement.textContent = `Current Streak : ${streak}`;
 };
 
 // Save message + category for today
@@ -267,12 +276,6 @@ const generateMessage = () => {
 // Main logic
 getMessage();
 
-
-/* ################################### UI ################################### */
-
-const categoryElement = document.getElementById("check-in-category");
-const messageElement = document.getElementById("check-in-message");
-const streakElement = document.getElementById("check-in-streak");
 
 categoryElement.textContent = category
 messageElement.textContent = message;
