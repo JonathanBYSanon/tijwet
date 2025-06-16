@@ -9,7 +9,7 @@ document.addEventListener("optionbarLoaded", () => {
 let ActivePlayer;
 let counter;
 let isOver = false;
-let onePlayerMode = false;
+let onePlayerMode = true;
 let playerMoves = [];
 let aiMoves = [];
 let aiHasCenter = false;
@@ -144,25 +144,25 @@ const reset = (all) => {
     isOver = false;
 }
 
-function modeDisplay() {
-  if (onePlayerMode) {
-    modeSpan.textContent = "1 Player";
-  } else {
-    modeSpan.textContent = "2 Players";
-  }
-}
+// function modeDisplay() {
+//   if (onePlayerMode) {
+//     modeSpan.textContent = "1 Player";
+//   } else {
+//     modeSpan.textContent = "2 Players";
+//   }
+// }
 
 /*############### UI ###########################*/
 
 const boardUi = document.getElementById("board");
 const modeSwitcher = document.querySelector("#mode-toggle input[type='checkbox']");
-const modeSpan = document.getElementById("mode");
+//const modeSpan = document.getElementById("mode");
 
-modeSwitcher.addEventListener("change", () => {
-  reset(true);
-  onePlayerMode = modeSwitcher.checked;
-  modeDisplay();
-});
+// modeSwitcher.addEventListener("change", () => {
+//   reset(true);
+//   onePlayerMode = modeSwitcher.checked;
+//   modeDisplay();
+// });
 
 boardUi.addEventListener("click", (e) => {
 

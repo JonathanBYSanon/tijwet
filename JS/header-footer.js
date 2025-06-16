@@ -21,6 +21,7 @@ let footerLinks =
 
 document.addEventListener("DOMContentLoaded", function () {
     const isIndex = window.location.pathname.includes("index") || window.location.pathname.endsWith("/");
+    const isHome = window.location.pathname.includes("HOME")
 
     const basePath = isIndex ? "HTML/" : "../";
 
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-    if(!isIndex) {
+    if(!isIndex && !isHome) {
         fetch(`${basePath}COMPONENT/optionbar.html`)
             .then(res => res.text())
             .then(html => {
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
             });
     }
+    
     fetch(`${basePath}COMPONENT/footer.html`)
         .then(res => res.text())
         .then(html => {

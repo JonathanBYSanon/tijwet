@@ -1,0 +1,41 @@
+#back-button
+{
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+main a {
+    flex:1;
+    display: block;
+    padding: 1.2rem 2rem;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-wrap: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+main a:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

@@ -1,42 +1,42 @@
-let games = [
+let sologames = [
     {
-        "img" : "ASSETS/tic-tac-toe.webp",
+        "img" : "../../ASSETS/tic-tac-toe.webp",
         "title" : "Tic Tac Toe",
-        "url" : "HTML/GAME/tic-tac-toe.html",
+        "url" : "../GAME/tic-tac-toe.html",
         "default" : false
     },
     {
-      "img" : "ASSETS/dice.webp",
+      "img" : "../../ASSETS/dice.webp",
       "title" : "Dice Roller",
-      "url" : "HTML/GAME/dice.html",
+      "url" : "../GAME/dice.html",
       "default" : false
     },
     {
-      "img" : "ASSETS/coin.webp",
+      "img" : "../../ASSETS/coin.webp",
       "title" : "Coin Flipper",
-      "url" : "HTML/GAME/coin.html",
+      "url" : "../GAME/coin.html",
       "default" : false
     },
     {
-      "img" : "ASSETS/capital-quiz.webp",
+      "img" : "../../ASSETS/capital-quiz.webp",
       "title" : "Tijwet Quiz : Capitals",
-      "url" : "HTML/GAME/capital-quiz.html",
+      "url" : "../GAME/capital-quiz.html",
       "default" : false
     },
     {
-      "img" : "ASSETS/math-quiz.webp",
+      "img" : "../../ASSETS/math-quiz.webp",
       "title" : "Tijwet Quiz : Maths",
-      "url" : "HTML/GAME/math-quiz.html",
+      "url" : "../GAME/math-quiz.html",
       "default" : false
     },
     {
-      "img" : "ASSETS/click-trail.webp",
+      "img" : "../../ASSETS/click-trail.webp",
       "title" : "Click Trail",
-      "url" : "HTML/GAME/click-trail.html",
+      "url" : "../GAME/click-trail.html",
       "default" : false
     },
     {
-        "img" : "ASSETS/more_coming_soon.webp",
+        "img" : "../../ASSETS/more_coming_soon.webp",
         "title" : "MORE COMING SOON",
         "url" : "#",
         "default" : true
@@ -48,8 +48,8 @@ const game_template = document.querySelector('#game-template');
 
 let game_clone;
 
-const gamesExceptDefault = games.slice(0, -1);
-const defaultGame = games[games.length - 1];
+const gamesExceptDefault = sologames.slice(0, -1);
+const defaultGame = sologames[sologames.length - 1];
 
 const sortedGames = gamesExceptDefault.sort((a, b) => a.title.localeCompare(b.title));
 sortedGames.push(defaultGame);
